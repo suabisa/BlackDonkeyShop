@@ -1,0 +1,65 @@
+.index_swiper{
+    swiper{
+        width: 750rpx;
+        height: 340rpx;
+        //小程序swiper固定高度150px
+        // 在微信小程序swiper组件中需要使用定高来使swiper-item中的内容得到展现
+        // 否则就会出现内容无法显示或者显示不全的问题
+        // https://juejin.im/post/6844903573331902478
+      image{
+        width: 100%;
+      }
+    }
+  }
+
+.index_cate{
+    display: flex;
+    navigator{
+        flex:1;
+        padding:25rpx;
+        image{
+            width:100%
+        }
+    }
+}
+
+.index_floor{
+
+  .floor_group{
+
+    .floor_title{
+      padding: 10rpx 0;
+      image{
+        width:100%;
+      }
+    }
+
+    .floor_list{
+      overflow: hidden;
+      navigator{
+        float:left;
+        width: 33.33%;
+        border-left: 10rpx solid #fff;
+      // 四张小图  
+        &:nth-last-child(-n+4){ 
+          //==>navigator:nth-last-child(-n+4)隶属于其父元素的后四个子元素的navigator元素
+          height:33.33vw * 386 / 232 / 2;
+        }
+        &:nth-child(2),&:nth-child(3){
+          border-bottom: 10rpx solid #fff;
+        }
+        &:nth-child(1){
+          height:33.33vw * 386 / 232 ;//原本教程是mode为index2===0?widthFix:scaleFill，但是widthFix会造成增加左边距时宽度下降，高度也减少，下方会出现边距，与右侧的图片不在同一水平线上，因此修改为scaleFill(教程p57
+        }
+        &:nth-child(3),&:nth-child(5){
+          border-right: 10rpx solid #fff;
+        }
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+    }
+  }
+}

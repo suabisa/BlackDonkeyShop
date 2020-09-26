@@ -1,0 +1,19 @@
+
+<view class="search_row">
+  <text class="iconfont icon-search"/>
+  <input type="text" class="input" placeholder="请输入你要“搜索”的内容"
+  bindinput="handleInput"
+  value="{{value}}"/>
+  <button class="clear" wx:if="{{isInput}}" bindtap="handleClear">取消</button>
+</view>
+<view class="search-b">
+  <view class="search-item" wx:for="{{goods}}" wx:key="goods_id">
+    <navigator class="info" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      {{item.goods_name}}
+    </navigator>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="noGoods" wx:if="{{!hasGoods}}">
+  搜索不到宝贝...
+</view>

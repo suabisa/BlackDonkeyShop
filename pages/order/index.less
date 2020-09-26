@@ -1,0 +1,79 @@
+page {
+  background-color: #f6f6f6;
+}
+.order_main{
+  .order_item{
+    background-color: #fff;
+    margin-top: 20rpx;
+    &:nth-of-type(1){
+      margin-top: 0;
+    }
+    .order_h{
+      display: flex;
+      justify-content: space-between;
+      padding: 20rpx;
+      color: #505050;
+      font-size: 26rpx;
+    }
+    .order_b{
+      .goods{
+        display: flex;
+        margin-top: 20rpx;
+        padding:10rpx 10rpx 0 10rpx;
+        &:nth-of-type(1){
+          margin-top: 0;
+        }
+        .goods_img{
+          width: 160rpx;
+        }
+        .goods_info{
+          margin-left: 20rpx;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;width: 70vw;
+          .name_num{
+            display: flex;
+            .name {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-right: 20rpx;
+            }
+          }
+          .smallprice{
+            font-weight: 600;
+            font-size: 30rpx;
+            color: var(--themeColor);
+          }
+        }
+      }
+      .num_goods{
+        margin-top: 20rpx;
+        padding-left: 20rpx;
+        font-size: 28rpx;
+        color: #8d8d8d;
+      }
+      .price_number{
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -25rpx;
+        .number{
+          font-size: 26rpx;
+          color: #5d5d5d;
+          padding-left: 10rpx;
+        }
+        .price {
+          padding-left: 20rpx;
+          font-size: 32rpx;
+          color: var(--themeColor);
+          font-weight: 600;
+          padding-bottom: 20rpx;
+          position: relative;
+          top: 5rpx;
+          left: 5rpx;
+        }
+      }
+    }
+  }
+}

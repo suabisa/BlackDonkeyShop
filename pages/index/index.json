@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SearchBar":"/components/searchBar/searchBar"
+  },
+  "navigationBarTitleText": "黑驴商城"
+}

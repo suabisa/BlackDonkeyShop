@@ -1,0 +1,87 @@
+<!-- 简单用户信息 -->
+<view class="user_info_wrap">
+  <view class="user_img_wrap" wx:if="{{userInfo.avatarUrl}}">
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="user_login" wx:else>
+    <image class="user_unlogin" src="../../icons/unlogin.png"></image>
+    <navigator class="user_login_btn"open-type="navigate" url="/pages/login/index">
+      登录
+    </navigator>
+  </view>
+</view>
+
+
+<!-- 功能区 -->
+<view class="use_content">
+  <view class="use_main">
+    <!-- 历史足迹 -->
+    <view class="history_wrap">
+      <navigator>
+        <view class="history_num">0</view>
+        <view class="history_name">收藏的店铺</view>
+      </navigator>
+      <navigator url="/pages/collect/index">
+        <view class="history_num">{{collectNums}}</view>
+        <view class="history_name">收藏的商品</view>
+      </navigator>
+      <navigator>
+        <view class="history_num">0</view>
+        <view class="history_name">我的足迹</view>
+      </navigator>
+    </view>
+    <!-- 我的订单 -->
+    <view class="order">
+      <view class="order_top"> 我的订单</view>
+      <view class="order_content">
+        <navigator class="content_item" url="/pages/order/index?type=1">
+          <text class="iconfont icon-suggestion order_icon"></text>
+          <view class="allOrder">全部订单</view>
+        </navigator>
+        <navigator class="content_item" url="/pages/order/index?type=2">
+          <text class="iconfont icon-payment order_icon"></text>
+          <view class="allOrder">待付款</view>
+        </navigator>
+        <navigator class="content_item" url="/pages/order/index?type=3">
+          <text class="iconfont icon-clock order_icon"></text>
+          <view class="allOrder">待收货</view>
+        </navigator>
+        <view class="content_item" bind:tap="handleRefund">
+          <text class="iconfont icon-evitarepayment order_icon"></text>
+          <view class="all_order">退款退货</view>
+        </view>
+      </view>
+    </view>
+    <!-- 其他设置 -->
+    <view class="other">
+      <view class="other_item">
+        <view class="icon_title">
+          <view class="info">收货地址管理</view>
+        </view>
+      </view>
+      <view class="other_item">
+        <view class="icon_title">
+            <button class="info" open-type="contact">联系客服</button>
+        </view>
+      </view>
+      <view class="other_item">
+        <view class="icon_title">
+          <button class="info" open-type="feedback">意见反馈</button>
+        </view>
+      </view>
+      <view class="other_item">
+        <view class="icon_title">
+          <view class="info">关于我们</view>
+        </view>
+      </view>
+      <view class="other_item">
+        <view class="icon_title">
+          <button class="info" open-type="share">把应用推荐给其他人</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

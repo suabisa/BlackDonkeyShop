@@ -1,0 +1,18 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <!-- 上方标签（综合，销量，价格） -->
+    <view 
+    wx:for="{{tabs}}"
+    wx:key="id"
+    class="title_item {{item.isActive?'active':''}}"
+    bindtap="handleTabsTap"
+    data-index="{{index}}"
+    >
+      {{item.value}}
+    </view>
+  </view>
+  <!-- 下方商品列表 -->
+  <view class="tabs_conten">
+    <slot></slot>
+  </view>
+</view>
