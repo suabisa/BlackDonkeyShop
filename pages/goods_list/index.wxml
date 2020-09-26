@@ -8,7 +8,7 @@ bindtabsItemChange="handleTabsItemChange"
       class="goods_item"
       wx:for="{{goodsList}}"
       wx:key="goods_id"
-      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+      url="/pages/goods_detail/main?goods_id={{item.goods_id}}"
       >
         <!-- 左侧商品图片容器 -->
         <view class="goods_img_wrap">

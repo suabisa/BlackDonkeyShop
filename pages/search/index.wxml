@@ -8,7 +8,7 @@
 </view>
 <view class="search-b">
   <view class="search-item" wx:for="{{goods}}" wx:key="goods_id">
-    <navigator class="info" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    <navigator class="info" url="/pages/goods_detail/main?goods_id={{item.goods_id}}">
       {{item.goods_name}}
     </navigator>
     <text class="iconfont icon-youjiantou"></text>
